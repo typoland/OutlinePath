@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		B20663022687ACD30012D6FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20662D72687ACD00012D6FD /* ContentView.swift */; };
 		B20663032687ACD30012D6FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B20662D82687ACD30012D6FD /* Assets.xcassets */; };
 		B20663042687ACD30012D6FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B20662D82687ACD30012D6FD /* Assets.xcassets */; };
+		B20663152687AD3B0012D6FD /* BezierKit in Frameworks */ = {isa = PBXBuildFile; productRef = B20663142687AD3B0012D6FD /* BezierKit */; };
+		B20663182687AFF50012D6FD /* BezierKit in Frameworks */ = {isa = PBXBuildFile; productRef = B20663172687AFF50012D6FD /* BezierKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B20663152687AD3B0012D6FD /* BezierKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B20663182687AFF50012D6FD /* BezierKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +96,7 @@
 				B20662F02687ACD30012D6FD /* Tests iOS */,
 				B20662FB2687ACD30012D6FD /* Tests macOS */,
 				B20662DE2687ACD30012D6FD /* Products */,
+				B20663162687AFF50012D6FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -151,6 +156,13 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
+		B20663162687AFF50012D6FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,6 +179,9 @@
 			dependencies = (
 			);
 			name = "OutlinePath (iOS)";
+			packageProductDependencies = (
+				B20663142687AD3B0012D6FD /* BezierKit */,
+			);
 			productName = "OutlinePath (iOS)";
 			productReference = B20662DD2687ACD30012D6FD /* OutlinePath.app */;
 			productType = "com.apple.product-type.application";
@@ -184,6 +199,9 @@
 			dependencies = (
 			);
 			name = "OutlinePath (macOS)";
+			packageProductDependencies = (
+				B20663172687AFF50012D6FD /* BezierKit */,
+			);
 			productName = "OutlinePath (macOS)";
 			productReference = B20662E52687ACD30012D6FD /* OutlinePath.app */;
 			productType = "com.apple.product-type.application";
@@ -258,6 +276,9 @@
 				Base,
 			);
 			mainGroup = B20662D02687ACD00012D6FD;
+			packageReferences = (
+				B20663132687AD3B0012D6FD /* XCRemoteSwiftPackageReference "BezierKit" */,
+			);
 			productRefGroup = B20662DE2687ACD30012D6FD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -696,6 +717,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B20663132687AD3B0012D6FD /* XCRemoteSwiftPackageReference "BezierKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hfutrell/BezierKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B20663142687AD3B0012D6FD /* BezierKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B20663132687AD3B0012D6FD /* XCRemoteSwiftPackageReference "BezierKit" */;
+			productName = BezierKit;
+		};
+		B20663172687AFF50012D6FD /* BezierKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B20663132687AD3B0012D6FD /* XCRemoteSwiftPackageReference "BezierKit" */;
+			productName = BezierKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B20662D12687ACD00012D6FD /* Project object */;
 }
